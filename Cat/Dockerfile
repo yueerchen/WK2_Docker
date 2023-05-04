@@ -5,9 +5,9 @@ WORKDIR /usr/src/app
 
 # copy all the files to the container
 COPY . .
-RUN pip install --upgrade pip
+
 # install dependencies
-RUN pip install FLASK
+RUN pip install -r ./src/requirements.txt
 
 # define the port number the container should expose
 EXPOSE 5000
